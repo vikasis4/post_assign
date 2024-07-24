@@ -1,0 +1,37 @@
+version: "3.8"
+services:
+  backend:
+    build: ./backend
+    volumes:
+      - ./backend:/usr/src/app
+      - /usr/src/app/node_modules
+    ports:
+      - "8888:8888"
+    environment:
+      - NODE_ENV=development
+      - DATABASE=mongodb://mongo:27017/post
+      - PORT=8888
+      - NODE_OPTIONS=--openssl-legacy-provider
+      - JWT_SECRET=7fg48h4of4980yuddu9poje
+
+    command: sh -c "npm run setup && npm run dev"
+
+    networks:
+      - server-mongo
+
+    depends_on:
+      - mongo
+
+  mongo:
+    image: mongo
+    volumes:
+      - mongodb_data:/data/db
+    networks:
+      - server-mongo
+
+volumes:
+  mongodb_data:
+
+
+networks:
+  server-mongo:

@@ -1,0 +1,47 @@
+{
+  "name": "post_backend",
+  "version": "1.0.0",
+  "engines": {
+    "npm": "10.8.1",
+    "node": "22.4.0"
+  },
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "compression": "^1.7.4",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "dotenv": "16.3.1",
+    "express": "^4.18.2",
+    "express-rate-limit": "^7.1.5",
+    "glob": "10.3.10",
+    "joi": "^17.11.0",
+    "jsonwebtoken": "^9.0.2",
+    "lodash": "^4.17.21",
+    "module-alias": "^2.2.3",
+    "moment": "^2.30.1",
+    "mongoose": "^8.1.1",
+    "mongoose-autopopulate": "^1.1.0",
+    "multer": "^1.4.4",
+    "node-cache": "^5.1.2",
+    "resend": "^2.0.0",
+    "shortid": "^2.2.16"
+  },
+  "devDependencies": {
+    "nodemon": "3.0.1"
+  },
+  "_moduleAliases": {
+    "@": "src"
+  },
+  "main": "server.js",
+  "author": "VIKAS",
+  "email": "vikas1204046@gmail.com",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/idurar/idurar-erp-crm/.git"
+  },
+  "homepage": "*"
+}
